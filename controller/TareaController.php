@@ -1,17 +1,7 @@
 <?php
 
-class TareaController{
-    var $Tarea;
+require_once("./modal/Tarea.php");
 
-    function __construct(){
-        $this->Tarea = [
-            1 => new Tarea(1,"TareaController","Incompleto",1)
-        ];
-    }
-
-    public function index(){
-        $rowset  = $this ->tarea;
-
-        require('view/index.php');
-    }
-}
+$tarea = new Tarea();
+$rowset = $Tarea->get_proyecto();
+require_once('view/index.php');
