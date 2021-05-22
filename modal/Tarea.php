@@ -14,7 +14,7 @@ class Tarea{
         while($filas=$consulta->fetch_assoc()){
             $this->tarea[]=$filas;
         }
-        return $this->proyecto;
+        return $this->tarea;
     }
 
 }
